@@ -26,12 +26,14 @@ public class BadStateFunctionTest {
 
         SleepAnalysisResult result = function.records(records);
 
-        assertEquals(2, result.getValue(), "Должно возвращать количество ночей с плохим состоянием сна");
+        assertEquals(2, result.getValue(),
+                "Должно возвращать количество ночей с плохим состоянием сна");
     }
 
     @Test
     void zeroDurationTest() {
         BadStateFunction function = new BadStateFunction();
-        assertEquals(0, function.records(List.of()).getValue(), "Должно возвращать количество ночей с плохим состоянием сна");
+        assertEquals(0, function.records(List.of()).getValue(),
+                "Должно возвращать количество ночей с плохим состоянием сна");
     }
 }

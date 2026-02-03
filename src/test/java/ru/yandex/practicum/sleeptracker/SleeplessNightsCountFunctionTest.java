@@ -53,8 +53,8 @@ public class SleeplessNightsCountFunctionTest {
 
         SleeplessNightsCountFunction sleeplessNights = new SleeplessNightsCountFunction();
 
-        assertEquals(0, sleeplessNights.records(records).getValue()
-                , "День должен считаться не бессонным, так как уже наступил следующий день");
+        assertEquals(0, sleeplessNights.records(records).getValue(),
+                "День должен считаться не бессонным, так как уже наступил следующий день");
     }
 
     @Test
@@ -66,7 +66,7 @@ public class SleeplessNightsCountFunctionTest {
 
         SleeplessNightsCountFunction sleeplessNights = new SleeplessNightsCountFunction();
 
-        assertEquals(1, sleeplessNights.records(records).getValue()
-                , "День должен считаться бессонным, так как следующий день ещё не наступил");
+        assertEquals(1, sleeplessNights.records(records).getValue(),
+                "День должен считаться бессонным, так как следующий день ещё не наступил");
     }
 }

@@ -32,6 +32,7 @@ public class AvgDurationFunctionTest {
     @Test
     void zeroDurationTest() {
         AvgDurationFunction function = new AvgDurationFunction();
-        assertEquals(0, function.records(List.of()).getValue(), "Должно возвращать промежуток размером 0");
+        assertEquals(0, function.records(List.of()).getValue(),
+                "Должно возвращать промежуток размером 0");
     }
 }

@@ -56,7 +56,7 @@ public class ChronotypeFunctionTest {
 
         ChronotypeFunction chronotypeFunction = new ChronotypeFunction();
 
-        assertEquals(Chronotype.PIGEON, chronotypeFunction.records(records).getChronotype()
-                , "Пользователь должен быть совой, так как ложиться после 23 и просыпается после 9");
+        assertEquals(Chronotype.PIGEON, chronotypeFunction.records(records).getChronotype(),
+                "Пользователь должен быть совой, так как ложиться после 23 и просыпается после 9");
     }
 }

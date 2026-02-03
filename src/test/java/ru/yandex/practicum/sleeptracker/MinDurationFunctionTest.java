@@ -32,6 +32,7 @@ public class MinDurationFunctionTest {
     @Test
     void zeroDurationTest() {
         MinDurationFunction function = new MinDurationFunction();
-        assertEquals(0, function.records(List.of()).getValue(), "Должно возвращать промежуток размером 0");
+        assertEquals(0, function.records(List.of()).getValue(),
+                "Должно возвращать промежуток размером 0");
     }
 }
