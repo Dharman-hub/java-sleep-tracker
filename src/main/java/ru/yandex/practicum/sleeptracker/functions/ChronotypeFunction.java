@@ -67,8 +67,8 @@ public class ChronotypeFunction implements STAFunction {
         LocalDateTime nightPeriodEnd = date.atTime(6, 0);
 
         SleepTrackerRecord nightSession = records.stream()
-                .filter((SleepTrackerRecord r) -> sleepPeriod(r.getStart(), r.getEnd(), nightPeriodStart
-                        , nightPeriodEnd))
+                .filter((SleepTrackerRecord r) -> sleepPeriod(r.getStart(), r.getEnd(), nightPeriodStart,
+                        nightPeriodEnd))
                 .findFirst()
                 .orElse(null);
 
@@ -93,8 +93,8 @@ public class ChronotypeFunction implements STAFunction {
         return Chronotype.PIGEON;
     }
 
-    public static boolean sleepPeriod(LocalDateTime firstStart, LocalDateTime lastEnd, LocalDateTime nightPeriodStart
-            , LocalDateTime nightPeriodEnd) {
+    public static boolean sleepPeriod(LocalDateTime firstStart, LocalDateTime lastEnd, LocalDateTime nightPeriodStart,
+                                      LocalDateTime nightPeriodEnd) {
         return firstStart.isBefore(nightPeriodEnd) && lastEnd.isAfter(nightPeriodStart);
     }
 }

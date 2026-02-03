@@ -39,12 +39,12 @@ public class SleeplessNightsCountFunction implements STAFunction {
         LocalDateTime nightPeriodStart = date.atTime(0, 0);
         LocalDateTime nightPeriodEnd = date.atTime(6, 0);
         return records.stream()
-                .anyMatch(r -> sleepPeriod(r.getStart(), r.getEnd(), nightPeriodStart
-                        , nightPeriodEnd));
+                .anyMatch(r -> sleepPeriod(r.getStart(), r.getEnd(), nightPeriodStart,
+                        nightPeriodEnd));
     }
 
-    public boolean sleepPeriod(LocalDateTime firstStart, LocalDateTime lastEnd, LocalDateTime nightPeriodStart
-            , LocalDateTime nightPeriodEnd) {
+    public boolean sleepPeriod(LocalDateTime firstStart, LocalDateTime lastEnd, LocalDateTime nightPeriodStart,
+                               LocalDateTime nightPeriodEnd) {
         return firstStart.isBefore(nightPeriodEnd) && lastEnd.isAfter(nightPeriodStart);
     }
 }

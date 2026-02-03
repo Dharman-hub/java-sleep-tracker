@@ -7,7 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,7 +30,7 @@ public class SleepTrackerApp {
 
         List<SleepTrackerRecord> records =
                 Files.readAllLines(Path.of(args[0])).stream()
-                        .map(SleepTrackerApp::parseLine)   // Optional<SleepTrackerRecord>
+                        .map(SleepTrackerApp::parseLine)
                         .flatMap(java.util.Optional::stream)
                         .toList();
 
