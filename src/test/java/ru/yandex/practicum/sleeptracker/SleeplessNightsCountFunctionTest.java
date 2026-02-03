@@ -24,8 +24,8 @@ public class SleeplessNightsCountFunctionTest {
 
         SleeplessNightsCountFunction sleeplessNights = new SleeplessNightsCountFunction();
 
-        assertEquals(2, sleeplessNights.records(records).getValue()
-                , "Дни бессонные, потому что не пересекают промежуток сна с 0:00-6:00");
+        assertEquals(2, sleeplessNights.records(records).getValue(),
+                "Дни бессонные, потому что не пересекают промежуток сна с 0:00-6:00");
     }
 
     @Test
@@ -40,8 +40,8 @@ public class SleeplessNightsCountFunctionTest {
 
         SleeplessNightsCountFunction sleeplessNights = new SleeplessNightsCountFunction();
 
-        assertEquals(0, sleeplessNights.records(records).getValue()
-                , "Дни не бессонные, потому что пересекают промежуток сна с 0:00-6:00");
+        assertEquals(0, sleeplessNights.records(records).getValue(),
+                "Дни не бессонные, потому что пересекают промежуток сна с 0:00-6:00");
     }
 
     @Test
