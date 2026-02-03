@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BadStateFunctionTest {
 
     @Test
-    void BadStateTest() {
+    void badStateTest() {
         LocalDateTime date1 = LocalDateTime.of(2026, 1, 1, 22, 0);
         LocalDateTime date2 = LocalDateTime.of(2026, 1, 2, 2, 0);
         LocalDateTime date3 = LocalDateTime.of(2026, 1, 3, 22, 0);
