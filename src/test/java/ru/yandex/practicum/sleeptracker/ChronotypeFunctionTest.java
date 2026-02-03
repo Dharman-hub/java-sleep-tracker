@@ -24,8 +24,8 @@ public class ChronotypeFunctionTest {
 
         ChronotypeFunction chronotypeFunction = new ChronotypeFunction();
 
-        assertEquals(Chronotype.OWL, chronotypeFunction.records(records).getChronotype()
-                , "Пользователь должен быть совой, так как ложиться после 23 и просыпается после 9");
+        assertEquals(Chronotype.OWL, chronotypeFunction.records(records).getChronotype(),
+                "Пользователь должен быть совой, так как ложиться после 23 и просыпается после 9");
     }
 
     @Test
@@ -40,8 +40,8 @@ public class ChronotypeFunctionTest {
 
         ChronotypeFunction chronotypeFunction = new ChronotypeFunction();
 
-        assertEquals(Chronotype.LARK, chronotypeFunction.records(records).getChronotype()
-                , "Пользователь должен быть совой, так как ложиться после 23 и просыпается после 9");
+        assertEquals(Chronotype.LARK, chronotypeFunction.records(records).getChronotype(),
+                "Пользователь должен быть совой, так как ложиться после 23 и просыпается после 9");
     }
 
     @Test
